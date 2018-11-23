@@ -1,2 +1,1 @@
-
-print(5/0)
+print("case #1: " +str(1))
