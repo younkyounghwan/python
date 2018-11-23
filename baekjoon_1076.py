@@ -4,8 +4,10 @@ for i in range(0,3):
     x = input()
     l.append(x)
 for i in range(0,2):
-
-    if l[i] == "brown":
+    if l[i] == "black":
+        if i != 0:
+            sum = sum + "0"
+    elif l[i] == "brown":
         sum = sum + "1"
     elif l[i] == "red":
         sum = sum + "2"
@@ -23,9 +25,6 @@ for i in range(0,2):
         sum = sum + "8"
     elif l[i] == "white":
         sum = sum + "9"
-
-if l[0] == "black" and l[1] == "black":
-    sum = 0
 
 sum = int(sum)
 if l[2] == "black":
