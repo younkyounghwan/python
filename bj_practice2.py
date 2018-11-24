@@ -1,2 +1,6 @@
-l = [1,2,3,4,4,6,77]
-print(max(l))
+a = 0
+for i in range(0,10):
+    a += i
+    if a > 5:
+        break
+print(a)
