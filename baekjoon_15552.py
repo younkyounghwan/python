@@ -1,11 +1,7 @@
 import sys
-x = sys.stdin.readline()
-x = int(x)
-s = []
+x = int(sys.stdin.readline())
 for i in range(0,x):
     a, b = sys.stdin.readline().split()
-    a = int(a)
-    b = int(b)
-    s.append(a+b)
-for i in range(0,x):
-    print(s[i])
+    a = a.rstrip()
+    b = b.rstrip()
+    print(int(a)+int(b))
