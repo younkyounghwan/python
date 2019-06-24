@@ -4,13 +4,14 @@ for i in range(0,x):
     y = input()
     if len(y) == 1:
         count += 1
-    elif y[len(y)-1] == y[len(y)-2]:
+    elif len(y) == 2:
         count += 1
     else:
-        for i in range(0,len(y)-1):
-            if y[i] != y[i+1]:
-                if y.count(y[i],i+1) > 0:
+        for j in range(0,len(y)-1):
+            if y[j] != y[j+1]:
+                if y.count(y[j],j+1) > 0:
                     break
-            if i == (len(y)-2):
+            if j == (len(y)-2):
                 count += 1
+                break
 print(count)
