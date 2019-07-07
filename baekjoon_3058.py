@@ -1,6 +1,5 @@
 l = []
 p = []
-
 x = int(input())
 for i in range(0,x):
     y = map(int,input().split())
