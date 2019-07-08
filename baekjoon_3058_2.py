@@ -1,7 +1,7 @@
-def intiger(x):
-    x = int(x)
+a ,b = map(int,input().split())
 x = input().split()
-y = map(intiger,input().split())
+y = map(int,input().split())
 print(y)
 print(type(x))
 print(type(y))
+print(a, b)
