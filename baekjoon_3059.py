@@ -1,4 +1,4 @@
-x = int(input())
+x = int(input()) # xucking call by reference
 q = [] #list include sum of alphabet
 
 for i in range(0,x):
