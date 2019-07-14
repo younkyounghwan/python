@@ -57,199 +57,228 @@ for i in range(0,T):
 
             if j == 0: # 0일시
 
-                #l1기준
-                if l1[1] == w and l1[n-1] == w and l2[0] != w:
-                    if l1[0] + l2[0] <= w:
+                if l1[0] != w:
+                    #l1기준
+                    if l1[1] == w and l1[n - 1] == w and l2[0] == w:
                         count += 1
                         l1[0] = w
-                        l2[0] = w
-                    else:
-                        count += 2
-                        l1[0] = w
-                        l2[0] = w
 
-                elif l1[1] == w and l1[n-1] != w and l2[0] == w:
-                    if l1[0] + l1[n-1] <= w:
-                        count += 1
-                        l1[0] = w
-                        l1[n - 1] = w
-                    else:
-                        count += 2
-                        l1[0] = w
-                        l1[n - 1] = w
+                    elif l1[1] == w and l1[n-1] == w and l2[0] != w:
+                        if l1[0] + l2[0] <= w:
+                            count += 1
+                            l1[0] = w
+                            l2[0] = w
+                        else:
+                            count += 2
+                            l1[0] = w
+                            l2[0] = w
 
-                elif l1[1] != w and l1[n-1] == w and l2[0] == w:
-                    if l1[0] + l1[1] <= w:
-                        count += 1
-                        l1[0] = w
-                        l1[1] = w
-                    else:
-                        count += 2
-                        l1[0] = w
-                        l1[1] = w
+                    elif l1[1] == w and l1[n-1] != w and l2[0] == w:
+                        if l1[0] + l1[n-1] <= w:
+                            count += 1
+                            l1[0] = w
+                            l1[n - 1] = w
+                        else:
+                            count += 2
+                            l1[0] = w
+                            l1[n - 1] = w
 
-                #l2기준
-                if l2[1] == w and l2[n - 1] == w and l1[0] != w:
-                    if l2[0] + l1[0] <= w:
-                        count += 1
-                        l2[0] = w
-                        l1[0] = w
-                    else:
-                        count += 2
-                        l1[0] = w
-                        l2[0] = w
+                    elif l1[1] != w and l1[n-1] == w and l2[0] == w:
+                        if l1[0] + l1[1] <= w:
+                            count += 1
+                            l1[0] = w
+                            l1[1] = w
+                        else:
+                            count += 2
+                            l1[0] = w
+                            l1[1] = w
 
-                elif l2[1] == w and l2[n - 1] != w and l1[0] == w:
-                    if l2[0] + l2[n - 1] <= w:
+                if l2[0] != w:
+                    #l2기준
+                    if l2[1] == w and l2[n - 1] == w and l1[0] == w:
                         count += 1
                         l2[0] = w
-                        l2[n - 1] = w
-                    else:
-                        count += 2
-                        l2[0] = w
-                        l2[n - 1] = w
+                    elif l2[1] == w and l2[n - 1] == w and l1[0] != w:
+                        if l2[0] + l1[0] <= w:
+                            count += 1
+                            l2[0] = w
+                            l1[0] = w
+                        else:
+                            count += 2
+                            l1[0] = w
+                            l2[0] = w
 
-                elif l2[1] != w and l2[n - 1] == w and l1[0] == w:
-                    if l2[0] + l2[1] <= w:
-                        count += 1
-                        l2[0] = w
-                        l2[1] = w
-                    else:
-                        count += 2
-                        l2[0] = w
-                        l2[1] = w
+                    elif l2[1] == w and l2[n - 1] != w and l1[0] == w:
+                        if l2[0] + l2[n - 1] <= w:
+                            count += 1
+                            l2[0] = w
+                            l2[n - 1] = w
+                        else:
+                            count += 2
+                            l2[0] = w
+                            l2[n - 1] = w
+
+                    elif l2[1] != w and l2[n - 1] == w and l1[0] == w:
+                        if l2[0] + l2[1] <= w:
+                            count += 1
+                            l2[0] = w
+                            l2[1] = w
+                        else:
+                            count += 2
+                            l2[0] = w
+                            l2[1] = w
 
             if j == n-1: # n-1 일시
-
-                #l1기준
-                if l1[0] == w and l1[n-2] == w and l2[n-1] != w:
-                    if l1[n-1] + l2[n-1] <= w:
+                if l1[n-1] != w:
+                    #l1기준
+                    if l1[0] == w and l1[n - 2] == w and l2[n - 1] == w:
                         count += 1
                         l1[n-1] = w
-                        l2[n-1] = w
-                    else:
-                        count += 2
-                        l1[n-1] = w
-                        l2[n-1] = w
 
-                elif l1[0] == w and l1[n-2] != w and l2[n-1] == w:
-                    if l1[n-1] + l1[n-2] <= w:
-                        count += 1
-                        l1[n-1] = w
-                        l1[n-2] = w
-                    else:
-                        count += 2
-                        l1[n-1] = w
-                        l1[n-2] = w
+                    elif l1[0] == w and l1[n-2] == w and l2[n-1] != w:
+                        if l1[n-1] + l2[n-1] <= w:
+                            count += 1
+                            l1[n-1] = w
+                            l2[n-1] = w
+                        else:
+                            count += 2
+                            l1[n-1] = w
+                            l2[n-1] = w
 
-                elif l1[0] != w and l1[n-2] == w and l2[n-1] == w:
-                    if l1[n-1] + l1[0] <= w:
-                        count += 1
-                        l1[n-1] = w
-                        l1[0] = w
-                    else:
-                        count += 2
-                        l1[n-1] = w
-                        l1[0] = w
+                    elif l1[0] == w and l1[n-2] != w and l2[n-1] == w:
+                        if l1[n-1] + l1[n-2] <= w:
+                            count += 1
+                            l1[n-1] = w
+                            l1[n-2] = w
+                        else:
+                            count += 2
+                            l1[n-1] = w
+                            l1[n-2] = w
 
-                #l2 기준
-                if l2[0] == w and l2[n-2] == w and l1[n-1] != w:
-                    if l1[n-1] + l2[n-1] <= w:
-                        count += 1
-                        l1[n-1] = w
-                        l2[n-1] = w
-                    else:
-                        count += 2
-                        l1[n-1] = w
-                        l2[n-1] = w
+                    elif l1[0] != w and l1[n-2] == w and l2[n-1] == w:
+                        if l1[n-1] + l1[0] <= w:
+                            count += 1
+                            l1[n-1] = w
+                            l1[0] = w
+                        else:
+                            count += 2
+                            l1[n-1] = w
+                            l1[0] = w
 
-                elif l2[0] == w and l2[n-2] != w and l1[n-1] == w:
-                    if l2[n-1] + l2[n-2] <= w:
+                if l2[n - 1] != w:
+                    #l2 기준
+                    if l2[0] == w and l2[n - 2] == w and l1[n - 1] == w:
                         count += 1
                         l2[n-1] = w
-                        l2[n-2] = w
-                    else:
-                        count += 2
-                        l2[n-1] = w
-                        l2[n-2] = w
 
-                elif l2[0] != w and l2[n-2] == w and l1[n-1] == w:
-                    if l2[n-1] + l2[0] <= w:
-                        count += 1
-                        l2[n-1] = w
-                        l2[0] = w
-                    else:
-                        count += 2
-                        l2[n-1] = w
-                        l2[0] = w
+                    elif l2[0] == w and l2[n-2] == w and l1[n-1] != w:
+                        if l1[n-1] + l2[n-1] <= w:
+                            count += 1
+                            l1[n-1] = w
+                            l2[n-1] = w
+                        else:
+                            count += 2
+                            l1[n-1] = w
+                            l2[n-1] = w
+
+                    elif l2[0] == w and l2[n-2] != w and l1[n-1] == w:
+                        if l2[n-1] + l2[n-2] <= w:
+                            count += 1
+                            l2[n-1] = w
+                            l2[n-2] = w
+                        else:
+                            count += 2
+                            l2[n-1] = w
+                            l2[n-2] = w
+
+                    elif l2[0] != w and l2[n-2] == w and l1[n-1] == w:
+                        if l2[n-1] + l2[0] <= w:
+                            count += 1
+                            l2[n-1] = w
+                            l2[0] = w
+                        else:
+                            count += 2
+                            l2[n-1] = w
+                            l2[0] = w
 
             else: #나머지 케이스
-
-                #l1 기준
-                if l1[j+1] == w and l1[j - 1] == w and l2[j] != w:
-                    if l1[j] + l2[j] <= w:
+                if l1[j] != w:
+                    #l1 기준
+                    if l1[j + 1] == w and l1[j - 1] == w and l2[j] == w:
                         count += 1
                         l1[j] = w
-                        l2[j] = w
-                    else:
-                        count += 2
-                        l1[j] = w
-                        l2[j] = w
 
-                elif l1[j+1] == w and l1[j - 1] != w and l2[j] == w:
-                    if l1[j] + l1[j-1] <= w:
-                        count += 1
-                        l1[j] = w
-                        l1[j-1] = w
-                    else:
-                        count += 2
-                        l1[j] = w
-                        l1[j-1] = w
+                    elif l1[j+1] == w and l1[j - 1] == w and l2[j] != w:
+                        if l1[j] + l2[j] <= w:
+                            count += 1
+                            l1[j] = w
+                            l2[j] = w
+                        else:
+                            count += 2
+                            l1[j] = w
+                            l2[j] = w
 
-                elif l1[j+1] != w and l1[j - 1] == w and l2[j] == w:
-                    if l1[j] + l1[j+1] <= w:
-                        count += 1
-                        l1[j] = w
-                        l1[j+1] = w
-                    else:
-                        count += 2
-                        l1[j] = w
-                        l1[j+1] = w
+                    elif l1[j+1] == w and l1[j - 1] != w and l2[j] == w:
+                        if l1[j] + l1[j-1] <= w:
+                            count += 1
+                            l1[j] = w
+                            l1[j-1] = w
+                        else:
+                            count += 2
+                            l1[j] = w
+                            l1[j-1] = w
 
-                #l2 기준
-                if l2[j + 1] == w and l2[j - 1] == w and l1[j] != w:
-                    if l2[j] + l1[j] <= w:
-                        count += 1
-                        l1[j] = w
-                        l2[j] = w
-                    else:
-                        count += 2
-                        l1[j] = w
-                        l2[j] = w
+                    elif l1[j+1] != w and l1[j - 1] == w and l2[j] == w:
+                        if l1[j] + l1[j+1] <= w:
+                            count += 1
+                            l1[j] = w
+                            l1[j+1] = w
+                        else:
+                            count += 2
+                            l1[j] = w
+                            l1[j+1] = w
 
-                elif l2[j + 1] == w and l2[j - 1] != w and l1[j] == w:
-                    if l2[j] + l2[j - 1] <= w:
+                if l2[j] != w:
+
+                    #l2 기준
+                    if l2[j + 1] == w and l2[j - 1] == w and l1[j] == w:
                         count += 1
                         l2[j] = w
-                        l2[j - 1] = w
-                    else:
-                        count += 2
-                        l2[j] = w
-                        l2[j - 1] = w
 
-                elif l2[j + 1] != w and l2[j - 1] == w and l1[j] == w:
-                    if l2[j] + l2[j + 1] <= w:
-                        count += 1
-                        l2[j] = w
-                        l2[j + 1] = w
-                    else:
-                        count += 2
-                        l2[j] = w
-                        l2[j + 1] = w
+                    elif l2[j + 1] == w and l2[j - 1] == w and l1[j] != w:
+                        if l2[j] + l1[j] <= w:
+                            count += 1
+                            l1[j] = w
+                            l2[j] = w
+                        else:
+                            count += 2
+                            l1[j] = w
+                            l2[j] = w
+
+                    elif l2[j + 1] == w and l2[j - 1] != w and l1[j] == w:
+                        if l2[j] + l2[j - 1] <= w:
+                            count += 1
+                            l2[j] = w
+                            l2[j - 1] = w
+                        else:
+                            count += 2
+                            l2[j] = w
+                            l2[j - 1] = w
+
+                    elif l2[j + 1] != w and l2[j - 1] == w and l1[j] == w:
+                        if l2[j] + l2[j + 1] <= w:
+                            count += 1
+                            l2[j] = w
+                            l2[j + 1] = w
+                        else:
+                            count += 2
+                            l2[j] = w
+                            l2[j + 1] = w
         if a == count:
             break
 
-#step 4 마무리
+#step 4 마무리 (이거 개빡셈)
     print(count)
+    print(l1,l2)
 
 
