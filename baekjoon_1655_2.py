@@ -14,4 +14,14 @@ for i in range(0,x-1):
             print(b)
             c = y
     if i == 2:
+        if y >= b:
+            c = y
+        elif y >= a:
+            c = b
+            b = y
+        else:
+            c = b
+            b = a
+            a = y
+    
         
