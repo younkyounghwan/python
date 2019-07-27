@@ -278,7 +278,4 @@ for i in range(0,T):
             break
 
 #step 4 마무리 (이거 개빡셈)
-    print(count)
-    print(l1,l2)
-
 
