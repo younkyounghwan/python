@@ -11,9 +11,11 @@ while a<=9974: #d에 소수 리스트를 저장
         if  (a==p):
             d.append(a)
 
+
         if (a%p==0):
             break
     a += 1
+    if a%2 ==0 and a is nnot 
 for i in range(0,x): #
     y = sys.stdin.readline()
     y = int(y)
