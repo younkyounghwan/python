@@ -1,10 +1,9 @@
 x = int(input())
-l=[[]]*5
+l=[]
 for i in range(0,x):
     y = input()
     l.append([])
     for j in range(0,len(y)):
-
         l[i].append(y[j])
-
-print(l)
+for i in range(0,5):
+    print(l[i])
