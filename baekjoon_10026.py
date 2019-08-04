@@ -1,5 +1,5 @@
 x = int(input())
-l=[]
+l=[[]]*5
 for i in range(0,x):
     y = input()
     l.append([])
