@@ -8,7 +8,6 @@ def GetItemList(q): #큐 객체의 데이터 출력용 함수
         n -= 1
     return ret
 
-
 #선입선출 : first - in, first - out
 l = 'apple,banana,orange'
 q = queue.Queue()

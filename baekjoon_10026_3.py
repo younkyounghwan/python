@@ -5,7 +5,6 @@ N = int(input())
 
 picture = [list(input()) for _ in range(N)] #갓댐.....
 
-
 dx = [-1, 0, 1, 0]
 dy = [0, 1, 0, -1]
 
