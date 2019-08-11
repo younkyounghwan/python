@@ -1,9 +1,4 @@
-def plus(a,b):
-    result = a + b
-    return result
-
 n = int(input())
-
 
 messi_n2 = "Messi "
 messi_n1 = "Messi Gimossi "
@@ -32,11 +27,18 @@ while 1:
                 if messi_c[cnt1+i] == "A":
                     num -= 6
 
-
                 else:
                     num -= 14
-            else:
 
+            elif num > 6:
+                if messi_c[cnt1+i] == "A":
+                    num -= 6
+                else:
+                    break
+
+
+
+            else:
                 break
 
         break
@@ -47,38 +49,20 @@ while 1:
 
     messi_a = messi_b
     messi_b = messi_c
-    messi_c = messi_a + messi_b
+    messi_c = messi_b + messi_a
 
     cnt2 = cnt1
     cnt1 = cnt
     cnt = cnt1 + cnt2
 
-if n <= 6: # Messi
-    if messi_n1[n-1] == " ":
-        print(messi_n2 + messi_n1)
-    else:
-        print(messi_n2[n-1])
-
-elif n <= 14: #Messi Gimossi
+if n <= 14: #Messi Gimossi
     if messi_n[n-1] == " ":
         print(messi_n2 + messi_n1)
     else:
         print(messi_n1[n-1])
 
 else: # Messi Gimossi
-    if num == 14 or num == 6:
+    if messi_n1[num-1] == " ":
         print("Messi Messi Gimossi")
-    elif num == 1:
-        print("M")
-    elif num == 2:
-        print("e")
-    elif num == 3 or num == 4 or num == 11 or num == 12:
-        print("s")
-    elif num == 5 or num == 8 or num == 13:
-        print("i")
-    elif num == 7:
-        print("G")
-    elif num == 9:
-        print("m")
-    elif num == 10:
-        print("o")
+    else:
+        print(messi_n1[num-1])
