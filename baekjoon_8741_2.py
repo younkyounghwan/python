@@ -1,1 +1,1 @@
-x = int(input())
+x = int(input());print(bin(((2**x-1)+2)*(((2**x-1))//2)+1)[2:])
