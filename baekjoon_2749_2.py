@@ -1,15 +1,10 @@
 import sys
-x = int(sys.stdin.readline())
-a = 0
-b = 1
-c = a + b
-if x == 1:
-    print(a)
-elif x == 2:
-    print(b)
-else:
-    for _ in[0]*x:
-        a = b
-        b = c
-        c = a + b
-    print(a%1000000)
+n = int(sys.stdin.readline())
+def fibo(n):
+    if n == 1:
+        return 0
+    elif n == 2:
+        return 1
+    else:
+        return fibo(n-1) + fibo(n-2)
+print(fibo(n)%1000000)
