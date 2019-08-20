@@ -7,11 +7,11 @@ for i in range(0,len(x)):
                 d -= 1
 
     elif x[i] == 'd':
-        if len(x[i:]) >= 2:
-            if x[i+1] == '-':
-                d -= 1
-        elif len(x[i:]) >= 3:
+        if len(x[i:]) >= 3:
             if x[i+1] == 'z' and x[i+2] == '=':
+                d -= 2
+        elif len(x[i:]) >= 2:
+            if x[i+1] == '-':
                 d -= 1
 
     elif x[i] == 'l':
@@ -31,7 +31,11 @@ for i in range(0,len(x)):
 
     elif x[i] == 'z':
         if len(x[i:]) >= 2:
-            if x[i+1] == '=':
-                d -= 1
+            if i == 0:
+                if x[i+1] == '=':
+                    d -= 1
+            elif x[i-1] != 'd':
+                if x[i+1] == '=':
+                    d -= 1
 
 print(d)
