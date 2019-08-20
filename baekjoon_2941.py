@@ -10,7 +10,8 @@ for i in range(0,len(x)):
         if len(x[i:]) >= 2:
             if x[i+1] == '-':
                 d -= 1
-            elif x[i+1] == 'z' and x[i+2] == '=':
+        elif len(x[i:]) >= 3:
+            if x[i+1] == 'z' and x[i+2] == '=':
                 d -= 1
 
     elif x[i] == 'l':
